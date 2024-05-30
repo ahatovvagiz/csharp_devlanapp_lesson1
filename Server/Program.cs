@@ -12,7 +12,7 @@ namespace Server
         {
             using (Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
-                var localEndPoint = new IPEndPoint(IPAddress.Any, 12345); 
+                var localEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345); 
                 
                 listener.Blocking = true; 
                 listener.Bind(localEndPoint); 
